@@ -1,0 +1,153 @@
+@font-face {
+  font-family: pacifico;
+  src: url("../../src/assets/fonts/Pacifico/Pacifico-Regular.ttf");
+}
+@font-face {
+  font-family: poppins;
+  src: url("../../src/assets/fonts/Poppins/Poppins-Regular.ttf");
+}
+@font-face {
+  font-family: dancingScript;
+  src: url("../../src/assets/fonts/Dancing_Script/DancingScript-VariableFont_wght.ttf");
+}
+body {
+  background-image: url("../../src/assets/images/background-min.jpg");
+  background-position: 0 -400px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: poppins;
+}
+
+header {
+  background: rgba(39, 64, 96, 0.85);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+header nav {
+  display: flex;
+  justify-content: space-between;
+  width: 1440px;
+}
+header nav h1 {
+  font-family: pacifico;
+  font-size: 40px;
+  margin: 10px 0;
+  display: inline;
+}
+header nav #tabs {
+  margin: auto 0;
+}
+header nav #tabs .tab {
+  cursor: pointer;
+  color: #fff;
+  font-size: 25px;
+  margin: 0 30px;
+  text-decoration: none;
+}
+header nav #tabs .tab:hover {
+  border-color: #00c261;
+  color: #00c261;
+  padding: 4px 0;
+  transition: border-color 1s, color 1s, padding 0.5s;
+}
+header nav #tabs .active {
+  color: #d0ff00;
+  border-bottom: 3px solid #d0ff00;
+  border-top: 3px solid #d0ff00;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+main #home {
+  color: #fffbfb;
+  display: grid;
+  font-family: dancingScript;
+  font-size: 80px;
+  place-items: center;
+  margin: 100px 0;
+  width: 800px;
+}
+main #menu {
+  border-radius: 10px;
+  background-color: rgba(27, 40, 69, 0.95);
+  color: #fffbfb;
+  margin: 100px 0;
+  width: 800px;
+  min-height: 100vh;
+  text-align: center;
+}
+main #menu h1 {
+  border-bottom: 3px solid #fff;
+  display: inline-block;
+  font-family: pacifico;
+  font-size: 35px;
+  padding-top: 5px 0;
+}
+main #menu .item {
+  display: flex;
+  flex-direction: column;
+  padding: 50px 0;
+  place-items: center;
+}
+main #menu .item img {
+  border-radius: 10px;
+  width: 300px;
+}
+main #menu .item h2 {
+  font-family: dancingScript;
+  font-size: 30px;
+  margin: 40px 0 0 0;
+}
+main #menu .item p {
+  font-size: 20px;
+  width: 370px;
+  line-height: 1.5;
+  margin-top: 15px;
+}
+main #menu .item hr {
+  border: 1px dotted #fff;
+  margin-top: 30px;
+  width: 150px;
+}
+main #contact {
+  border-radius: 10px;
+  background-color: rgba(27, 40, 69, 0.95);
+  color: #fffbfb;
+  display: grid;
+  margin: 100px 0;
+  place-items: center;
+  width: 500px;
+  max-height: 350px;
+}
+main #contact h1 {
+  border-bottom: 3px solid #fff;
+  display: inline-block;
+  font-family: pacifico;
+  font-size: 35px;
+  padding-top: 5px 0;
+}
+main #contact p {
+  font-size: 25px;
+  width: 370px;
+  line-height: 1.5;
+  margin-top: 15px;
+}
+
+footer {
+  background: rgba(39, 64, 96, 0.85);
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+/* Perfecto */
+
+/*# sourceMappingURL=style.css.map */
