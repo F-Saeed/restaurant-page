@@ -1,0 +1,157 @@
+@use 'components/variables';
+@use 'components/fonts';
+
+body {
+  background-image: url('../../src/assets/images/background-min.jpg');
+  background-position: 0 -400px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: poppins;
+}
+
+header {
+  background: variables.$nav-color;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    width: 1440px;
+    h1 {
+      font-family: pacifico;
+      font-size: 40px;
+      margin: 10px 0;
+      display: inline;
+    }
+
+    #tabs {
+      margin: auto 0;
+
+      .tab {
+        cursor: pointer;
+        color: #fff;
+        font-size: 25px;
+        margin: 0 30px;
+        text-decoration: none;
+        &:hover {
+          border-color: rgb(0, 194, 97);
+          color: rgb(0, 194, 97);
+          padding: 4px 0;
+          transition: border-color 1s, color 1s, padding 0.5s;
+        }
+      }
+
+      .active {
+        color: rgb(208, 255, 0);
+        border-bottom: 3px solid rgb(208, 255, 0);
+        border-top: 3px solid rgb(208, 255, 0);
+      }
+    }
+  }
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+
+  #home {
+    color: rgb(255, 251, 251);
+    display: grid;
+    font-family: dancingScript;
+    font-size: 80px;
+    place-items: center;
+    margin: 100px 0;
+    width: 800px;
+  }
+
+  #menu {
+    border-radius: 10px;
+    background-color: variables.$general-color;
+    color: rgb(255, 251, 251);
+    margin: 100px 0;
+    width: 800px;
+    min-height: 100vh;
+    text-align: center;
+
+    h1 {
+      border-bottom: 3px solid #fff;
+      display: inline-block;
+      font-family: pacifico;
+      font-size: 35px;
+      padding-top: 5px 0;
+    }
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      padding: 50px 0;
+      place-items: center;
+
+      img {
+        border-radius: 10px;
+        width: 300px;
+      }
+
+      h2 {
+        font-family: dancingScript;
+        font-size: 30px;
+        margin: 40px 0 0 0;
+      }
+
+      p {
+        font-size: 20px;
+        width: 370px;
+        line-height: 1.5;
+        margin-top: 15px;
+      }
+
+      hr {
+        border: 1px dotted #fff;
+        margin-top: 30px;
+        width: 150px;
+      }
+    }
+  }
+
+  #contact {
+    border-radius: 10px;
+    background-color: variables.$general-color;
+    color: rgb(255, 251, 251);
+    display: grid;
+    margin: 100px 0;
+    place-items: center;
+    width: 500px;
+    max-height: 350px;
+
+    h1 {
+      border-bottom: 3px solid #fff;
+      display: inline-block;
+      font-family: pacifico;
+      font-size: 35px;
+      padding-top: 5px 0;
+    }
+
+    p {
+      font-size: 25px;
+      width: 370px;
+      line-height: 1.5;
+      margin-top: 15px;
+    }
+  }
+}
+
+footer {
+  background: variables.$nav-color;
+  color: #fff;
+  font-size: 20px;
+  padding: 10px 0;
+  position: relative;
+  bottom: 0;
+  text-align: center;
+  width: 100%;
+}
+
+/* Perfecto */

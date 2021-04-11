@@ -18,8 +18,15 @@
   },
   "homepage": "https://github.com/F-Saeed/restaurant#readme",
   "devDependencies": {
-    "webpack": "^5.30.0",
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.31.2",
     "webpack-cli": "^4.6.0"
+  },"babel": {
+    "presets": [
+      "@babel/preset-env"
+    ]
   },
   "dependencies": {}
 }
