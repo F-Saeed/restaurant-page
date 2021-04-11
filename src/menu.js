@@ -24,7 +24,7 @@ const menuTab = (capitalizeFirstLetter) => {
         const para = document.createElement('p');
         const hr = document.createElement('hr');
 
-        image.src = `../src/assets/images/${value}.jpg`;
+        image.src = `./assets/images/${value}.jpg`;
         item.className = 'item';
         if (value === 'paneer') {
           heading.innerText = 'Palak Paneer';
