@@ -1,20 +1,22 @@
 import { mainPage } from './mainPage';
 import { capitalizeFirstLetter } from './functions';
-import { homeTab } from './home';
-import { menuTab } from './menu';
-import { contactTab } from './contact';
-import { home, menu, contact } from './dom';
+import { homePage } from './home';
+import { menuPage } from './menu';
+import { contactPage } from './contact';
+import { homeButton, menuButton, contactButton } from './dom';
 
 (function () {
-  mainPage(capitalizeFirstLetter);
+  mainPage.init(capitalizeFirstLetter);
 
-  document.querySelector('#home').addEventListener('click', home(homeTab));
+  document
+    .querySelector('#home')
+    .addEventListener('click', homeButton(homePage));
 
   document
     .querySelector('#menu')
-    .addEventListener('click', menu(menuTab, capitalizeFirstLetter));
+    .addEventListener('click', menuButton(menuPage, capitalizeFirstLetter));
 
   document
     .querySelector('#contact')
-    .addEventListener('click', contact(contactTab));
+    .addEventListener('click', contactButton(contactPage));
 })();

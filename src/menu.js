@@ -1,52 +1,72 @@
-const menuTab = (capitalizeFirstLetter) => {
-  const menuFeatures = {
-    init() {
-      this.cacheDOM();
-      this.appendAndRender();
+const menuPage = {
+  itemArray: ['biryani', 'curry', 'paneer'],
+  headings: {
+    biryani: function () {
+      const tempHeading = document.createElement('h2');
+      tempHeading.innerText = 'Chicken Biryani';
+      return tempHeading;
     },
-    cacheDOM() {
-      this.content = document.querySelector('.content');
-      this.content.id = 'menu';
-      this.content.innerHTML = '';
-
-      this.mainHeading = document.createElement('h1');
-      this.mainHeading.innerText = 'Menu';
-
-      this.itemArray = ['biryani', 'curry', 'paneer'];
+    curry: function () {
+      const tempHeading = document.createElement('h2');
+      tempHeading.innerText = 'Chicken Curry';
+      return tempHeading;
     },
-    appendAndRender() {
-      this.content.appendChild(this.mainHeading);
-
-      this.itemArray.forEach((value) => {
-        const item = document.createElement('div');
-        const image = document.createElement('img');
-        const heading = document.createElement('h2');
-        const para = document.createElement('p');
-        const hr = document.createElement('hr');
-
-        image.src = `./assets/images/${value}.jpg`;
-        item.className = 'item';
-        if (value === 'paneer') {
-          heading.innerText = 'Palak Paneer';
-        } else if (value === 'curry') {
-          heading.innerText = 'Chicken Curry';
-        } else {
-          heading.innerText = capitalizeFirstLetter(value);
-        }
-        para.innerText =
-          'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit placeat facere earum';
-
-        item.appendChild(image);
-        item.appendChild(heading);
-        item.appendChild(para);
-        item.appendChild(hr);
-
-        this.content.appendChild(item);
-      });
+    paneer: function () {
+      const tempHeading = document.createElement('h2');
+      tempHeading.innerText = 'Palak Paneer';
+      return tempHeading;
     },
-  };
+  },
+  addItems(item) {
+    this.itemArray.push(item);
+  },
+  addHeading(item, heading) {
+    this.headings[`${item}`] = function () {
+      const tempHeading = document.createElement('h2');
+      tempHeading.innerText = heading;
+      return tempHeading;
+    };
+  },
+  init(capitalizeFirstLetter) {
+    this.cacheDOM();
+    this.append(capitalizeFirstLetter);
+  },
+  cacheDOM() {
+    this.content = document.querySelector('.content');
+    this.content.id = 'menu';
+    this.content.innerHTML = '';
 
-  menuFeatures.init();
+    this.mainHeading = document.createElement('h1');
+    this.mainHeading.innerText = 'Menu';
+  },
+  append(capitalizeFirstLetter) {
+    this.content.appendChild(this.mainHeading);
+
+    this.itemArray.forEach((value) => {
+      const item = document.createElement('div');
+      const image = document.createElement('img');
+      const heading = this.headings[`${value}`]();
+      const para = document.createElement('p');
+      const hr = document.createElement('hr');
+
+      item.className = 'item';
+      image.src = `./assets/images/${value}.jpg`;
+      para.innerText =
+        'Lorem ipsum dolor, sit amet consectet adipisicing elit. Velit placeat facere earum';
+
+      this.appendMultipleElements(item, image, heading, para, hr);
+
+      this.render(item);
+    });
+  },
+  appendMultipleElements(parent, ...elements) {
+    elements.forEach((element) => {
+      parent.appendChild(element);
+    });
+  },
+  render(element) {
+    this.content.appendChild(element);
+  },
 };
 
-export { menuTab };
+export { menuPage };

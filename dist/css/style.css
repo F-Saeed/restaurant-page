@@ -61,6 +61,7 @@ main {
   display: flex;
   justify-content: center;
   min-height: 100vh;
+  text-align: center;
 }
 main #home {
   color: #fffbfb;
@@ -69,16 +70,15 @@ main #home {
   font-size: 80px;
   place-items: center;
   margin: 100px 0;
-  width: 800px;
+  width: max(350px, 800px);
 }
 main #menu {
   border-radius: 10px;
   background-color: rgba(27, 40, 69, 0.95);
   color: #fffbfb;
   margin: 100px 0;
-  width: 800px;
+  width: max(350px, 800px);
   min-height: 100vh;
-  text-align: center;
 }
 main #menu h1 {
   border-bottom: 3px solid #fff;
@@ -95,7 +95,7 @@ main #menu .item {
 }
 main #menu .item img {
   border-radius: 10px;
-  width: 300px;
+  min-width: 300px;
 }
 main #menu .item h2 {
   font-family: dancingScript;
@@ -147,7 +147,5 @@ footer {
   text-align: center;
   width: 100%;
 }
-
-/* Perfecto */
 
 /*# sourceMappingURL=style.css.map */
