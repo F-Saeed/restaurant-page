@@ -8,10 +8,10 @@ const homeButton = (homeTab) => {
   };
 };
 
-const menuButton = (menuTab, capitalizeFirstLetter) => {
+const menuButton = (menuTab) => {
   return (event) => {
     if (event.target.className !== 'tab active') {
-      menuTab.init(capitalizeFirstLetter);
+      menuTab.init();
       document.querySelector('.active').className = 'tab';
       document.querySelector('#menu').className = 'tab active';
     }

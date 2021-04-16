@@ -27,9 +27,9 @@ const menuPage = {
       return tempHeading;
     };
   },
-  init(capitalizeFirstLetter) {
+  init() {
     this.cacheDOM();
-    this.append(capitalizeFirstLetter);
+    this.append();
   },
   cacheDOM() {
     this.content = document.querySelector('.content');
@@ -39,7 +39,7 @@ const menuPage = {
     this.mainHeading = document.createElement('h1');
     this.mainHeading.innerText = 'Menu';
   },
-  append(capitalizeFirstLetter) {
+  append() {
     this.content.appendChild(this.mainHeading);
 
     this.itemArray.forEach((value) => {

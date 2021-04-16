@@ -14,7 +14,7 @@ import { homeButton, menuButton, contactButton } from './dom';
 
   document
     .querySelector('#menu')
-    .addEventListener('click', menuButton(menuPage, capitalizeFirstLetter));
+    .addEventListener('click', menuButton(menuPage));
 
   document
     .querySelector('#contact')
