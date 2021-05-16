@@ -26,7 +26,7 @@ const mainPage = {
     this.content.innerHTML = 'Welcome to an authentic Indian experience!';
 
     this.footer = document.createElement('footer');
-    this.footer.innerText = 'Perfecto © 2021 | All RIghts Reserved.';
+    this.footer.innerText = 'Teekha © 2021 | All RIghts Reserved.';
   },
   append(capitalizeFirstLetter) {
     this.tabArray.forEach((value) => {
